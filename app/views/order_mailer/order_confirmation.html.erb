@@ -1,0 +1,57 @@
+<h1>Order Confirmation</h1>
+<p>Thank you for your order!</p>
+<h1>Order Details</h1>
+<table border="1">
+  <tr>
+    <th>User Name</th>
+    <td><%= @order.user.first_name %>&nbsp;
+      <%= @order.user.last_name %></td>
+  </tr>
+  <tr>
+    <th>Order Number</th>
+    <td><%= @order.order_number %></td>
+  </tr>
+  <tr>
+    <th>Total MRP</th>
+    <td><%= @order.total_mrp %></td>
+  </tr>
+  <tr>
+    <th>Total Price</th>
+    <td><%= @order.total_price %></td>
+  </tr>
+  <tr>
+    <th>Discount</th>
+    <td><%= @order.discount %></td>
+  </tr>
+  <tr>
+    <th>Tax</th>
+    <td><%= @order.tax %></td>
+  </tr>
+  <tr>
+    <th>Payment Method</th>
+    <td><%= @order.payment_method %></td>
+  </tr>
+  <tr>
+   <th>Address Details</th>
+       <table border="1">
+      <tr>
+        <th>street_address</th>
+        <td><%= @order.address.street_address %></td>
+      </tr>
+      <tr>
+        <th>city</th>
+        <td><%= @order.address.city %></td>
+      </tr>
+      <tr>
+        <th>state</th>
+        <td><%= @order.address.state %></td>
+      </tr>
+      <tr>
+        <th>zip_code</th>
+        <td><%= @order.address.zip_code %></td>
+      </tr>
+
+    </table>
+  </tr>
+</table>
+

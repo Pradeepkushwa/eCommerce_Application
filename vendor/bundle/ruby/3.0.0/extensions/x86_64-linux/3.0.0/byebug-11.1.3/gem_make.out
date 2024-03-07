@@ -1,0 +1,19 @@
+current directory: /home/lenovo/Desktop/eCommerce_Application/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+/home/lenovo/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/lenovo/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20240213-14427-l9g6e9.rb extconf.rb
+creating Makefile
+
+current directory: /home/lenovo/Desktop/eCommerce_Application/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/lenovo/Desktop/eCommerce_Application/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/lenovo/Desktop/eCommerce_Application/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20240213-14427-qdq51v/byebug
