@@ -1,0 +1,17 @@
+<%= form_tag import_csv_admin_products_path, multipart: true do %>
+  <table>
+    <tr>
+      <td>
+        <%= label_tag :file, 'Select a CSV File:' %>
+      </td>
+      <td>
+        <%= file_field_tag :dump, class: 'file-input' %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <%= submit_tag 'Submit', class: 'btn btn-primary' %>
+      </td>
+    </tr>
+  </table>
+<% end %>
