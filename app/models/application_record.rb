@@ -4,7 +4,7 @@ class ApplicationRecord < ActiveRecord::Base
     super + _ransackers.keys
   end
   def self.ransackable_associations(auth_object = nil)
-    ["image_attachment","document_attachment", "image_blob","document_blob"]
+    ["image_attachment","document_attachment","csv_file_attachment", "image_blob","document_blob","csv_file_blob"]
   end
   ActiveStorage::Attachment.class_eval do
     def self.ransackable_attributes(auth_object = nil)
