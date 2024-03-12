@@ -31,12 +31,12 @@ Rails.application.routes.draw do
   post "/add_product/:id", to: "carts#add_product"
   delete "/remove_product/:id", to: "carts#remove_product"
 
-  # resources :products do
-  #   collection do
-  #   post :import_csv
-  #   get  :import_csv
-  #   end
-  # end
+  resources :products do
+    collection do
+    post :import_csv
+    get  :import_csv
+    end
+  end
 
   get "/my_cart",  to: "carts#view_cart"
 
