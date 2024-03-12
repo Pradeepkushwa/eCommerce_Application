@@ -20,28 +20,15 @@ ActiveAdmin.register Product do
     link_to 'Upload CSV', action: 'import_csv'
   end
 
-  # collection_action :import_csv do
-  #   # debugger
-  #   render 'products/import_csv'
-  # end
-
-  # collection_action :import_csv, method: [:get, :post] do
-  #   # debugger
-  #   products = CsvHelper.convert_to_products(params[:dump][:file])
-  #   Product.transaction do
-  #     products.each(&:save!)
-  #   end
-  #   redirect_to({ action: :index }, notice: 'CSV imported successfully!')
-  # rescue StandardError
-  #   redirect_to({ action: :index },
-  #     flash: { error: 'CSV imported failed! Check the template is correct or contact a developer.' })
-  # end
-
   collection_action :import_csv, method: [:get, :post] do
     if request.post?
+      byebug
       begin
         raise 'No file attached' unless params.dig(:product, :csv_file).present?
 
+      # Validate if the attached file is a valid CSV file
+      # file_extension = File.extname(params[:product][:csv_file].original_filename).downcase
+      # raise 'Invalid file format' unless file_extension == '.csv'
         products = CsvHelper.convert_to_products(params[:product][:csv_file])
         Product.transaction do
           products.each(&:save!)
