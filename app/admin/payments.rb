@@ -16,5 +16,15 @@ ActiveAdmin.register Payment do
   # end
   remove_filter :order
   # remove_filter :payment
+    index do
+    selectable_column
+    id_column
+    column :user_id
+    column :payment_intent_id
+    column :order_id
+    column :payment_status
+    actions
+  end
+
   
 end

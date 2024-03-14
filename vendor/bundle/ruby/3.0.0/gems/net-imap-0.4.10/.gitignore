@@ -6,7 +6,7 @@
 /pkg/
 /rfcs
 /spec/reports/
-/tmp/
+/tmp/cache
 /Gemfile.lock
 /benchmarks/Gemfile*
 /benchmarks/parser.yml

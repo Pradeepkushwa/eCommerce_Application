@@ -24,7 +24,7 @@ gem "stripe"
 gem 'dotenv-rails', :groups => [:development, :test]
 
 # UI interface debugging-with-the-debug-gem
-gem "sassc"
+# gem "sassc"
 # gem "sassc-rails"
 
 gem 'active_model_serializers'
