@@ -9,7 +9,6 @@ RSpec.describe "Addresses", type: :request do
    @token   = JsonWebToken.encode(user_id: @user.id)
  end
  describe "GET /index" do
-    # byebug
     it "data is response successfully" do 
       get "/addresses",params:{token: @token}
       data = JSON.parse(response.body)
@@ -18,7 +17,6 @@ RSpec.describe "Addresses", type: :request do
   end
 
   describe "GET /show" do 
-    # byebug
     it "show address is successfully"  do
       get "/addresses/#{@address.id}",params: {token: @token}
       expect(response).to have_http_status(200)
@@ -30,7 +28,6 @@ RSpec.describe "Addresses", type: :request do
   end
 
   describe "POST /create" do
-    # byebug
     it "address is created successfully" do 
       post "/addresses",params:{token: @token, street_address: "string_add", state: "string_state", city: "bhopa", zip_code: 123456}
       expect(response).to have_http_status(200)
@@ -53,7 +50,6 @@ RSpec.describe "Addresses", type: :request do
   end
 
   describe "DELETE /destroy" do
-    debugger
     it "address is deleted successfully" do
       delete "/addresses/#{@address.id}", params: {token: @token}
       expect(response).to have_http_status(200)

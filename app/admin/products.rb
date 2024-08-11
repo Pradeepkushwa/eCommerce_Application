@@ -22,7 +22,6 @@ ActiveAdmin.register Product do
 
   collection_action :import_csv, method: [:get, :post] do
     if request.post?
-      byebug
       begin
         raise 'No file attached' unless params.dig(:product, :csv_file).present?
 

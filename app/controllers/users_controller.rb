@@ -5,11 +5,11 @@ class UsersController < ApplicationController
 
 	def index
 	    @users = User.all
-	    if @user.present?
+	    # if @user.present?
             render json: @users, each_serializer: UserSerializer
-        else 
-            render json: {error: "not content found"}, status: "204"
-        end
+        # else 
+        #     render json: {error: "not content found"}, status: "204"
+        # end
 
 	end
 
@@ -22,7 +22,6 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		debugger
 		@user = User.new(user_params)
 
 		if @user.save

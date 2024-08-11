@@ -5,7 +5,6 @@ class RequestsController < ApplicationController
 	end
 
 	def create
-		debugger
 		# @user = @current_user.find_by(id: params[:id])
 		@request = @current_user.requests.new(request_params)
 

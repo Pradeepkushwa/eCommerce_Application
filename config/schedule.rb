@@ -13,7 +13,7 @@ set :output, "log/cron.log"
 #
 every 1.minutes do
   # command "/usr/bin/some_great_command"
-  runner "User.user_message"
+  # runner "User.user_message"
   # rake "some:great:rake:task"
 end
 
